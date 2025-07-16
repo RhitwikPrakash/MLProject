@@ -63,7 +63,7 @@ if __name__=="__main__":
     print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
 
     # Before Hyperparameter Tuning - R2_Score -> 88.04 %
-    # After Hyperparameter Tuning - R2_Score -> 
+    # After Hyperparameter Tuning - R2_Score -> 88.04 % (No difference) 
 
 
 
