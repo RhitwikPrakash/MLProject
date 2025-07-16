@@ -5,10 +5,15 @@ WORKDIR /app
 COPY . /app
 
 # Install system packages: git (needed for pip install from GitHub)
-RUN apt update -y && apt install awscli -y
+RUN apt update -y && apt install -y gcc g++ libglib2.0-0 libsm6 libxext6 libxrender-dev
 
-# Upgrade pip and install Python dependencies
-RUN pip install -r requirements.txt
+COPY requirements.txt .
 
-# Run your app
-CMD ["python", "app.py"]
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python3", "app.py"]
