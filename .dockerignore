@@ -3,10 +3,11 @@ __pycache__/
 *.pyo
 *.pyd
 *.db
-.env
+*.log
+*.csv
 venv/
-.idea/
-.DS_Store
+.env
+.ipynb_checkpoints/
 .git
-.gitignore
-tests/
+.dockerignore
+Dockerfile
